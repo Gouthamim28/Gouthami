@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    n = int(input())
+if n < 18:
+   print("Ineligible")
+else:
+   print("Eligible")    
+    return 0;
+}
