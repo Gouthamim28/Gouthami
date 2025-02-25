@@ -1,0 +1,12 @@
+from abc import ABC, abstractmethod
+class Employe(ABC):
+    @abstractmethod
+    def role(self):
+        pass
+    
+class EmpCompany(Employe):
+    def role(self):
+        return "Full-Stack Dev"
+        
+e1=EmpCompany()
+print(e1.role())
