@@ -1,0 +1,19 @@
+class Solution:
+    def dailyTemperatures(self,temperatures):
+        n=len(temperatures)
+        answer = [0] * n
+        stack=[]
+        for i in range(n):
+            while stack and temperatures[i]>temperatures[stack[-1]]:
+                index = stack.pop()
+                answer[index]=i-index
+            stack.append(i)
+            
+        return answer
+temperatures=[72,73,74,69,71]
+solution=Solution()
+result=solution.dailyTemperatures(temperatures)
+print(result)
+
+
+output:= [1, 1, 0, 1, 0]
